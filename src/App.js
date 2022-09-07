@@ -31,7 +31,6 @@ const theme = {
 }
 
 export const App = () => {
-
   return (
     <Router>
       <ThemeProvider theme={theme}>

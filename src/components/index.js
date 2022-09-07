@@ -8,7 +8,6 @@ import Header from "./Header";
 import HouseOverView from "./pages/HouseOverView";
 import HouseSorting from "./pages/HouseSorting";
 
-
 export {
     Home,
     About,
@@ -18,5 +17,5 @@ export {
     Navigation,
     Header,
     HouseOverView,
-    HouseSorting
+    HouseSorting,
 }

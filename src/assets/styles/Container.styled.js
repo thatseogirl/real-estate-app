@@ -5,3 +5,8 @@ export const StyledContainer = styled.div`
   max-width: 100%;
   margin: auto;
 `;
+
+export const StyledMainContainer = styled.div`
+  background-color: ${(({ theme }) => theme.colors.secondaryBackground)};
+  height: 100vh;
+`

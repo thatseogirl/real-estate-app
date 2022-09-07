@@ -1,4 +1,4 @@
-import thatseogirl from '../assets/images/logo.png';
+import estate from '../assets/images/estate.png';
 import { NavLink, useLocation } from 'react-router-dom'
 import { StyledContainer } from '../assets/styles/Container.styled';
 import { Logo, NavBar, StyledUL, StyledNavigation } from '../assets/styles/StyledNav.styled';
@@ -11,7 +11,7 @@ const Navigation = () => {
         <StyledNavigation>
             <StyledContainer>
                 <NavBar>
-                    <Logo src={thatseogirl} alt="Logo" />
+                    <Logo src={estate} alt="Logo" />
                     <StyledUL>
                         <li className={splitLocation[1] === "" ? "active" : ""}>
                             <NavLink className="navLink" to="/">Houses</NavLink>

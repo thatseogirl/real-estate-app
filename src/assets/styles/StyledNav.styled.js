@@ -11,11 +11,12 @@ export const StyledNavigation = styled.div`
 export const NavBar = styled.nav`
   overflow: hidden;
   display: flex;
+  gap: 0.25rem;
 `;
 
 export const StyledUL = styled.ul`
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-top: 0.5em;
   font-family: "Montserrat", sans-serif;
 
@@ -34,6 +35,8 @@ export const StyledUL = styled.ul`
 `;
 
 export const Logo = styled.img`
-  width: 5%;
-  height: 6vh;
+background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius:50px;
 `;

@@ -1,24 +1,32 @@
 import PropTypes from "prop-types";
+import StyledButton from "../../assets/styles/Button.styled";
 
-const Button = ({ color, text, onClick }) => {
+const Button = ({ color, text, onClick, bgColor, position, left, textTransform, padding, borderRadius }) => {
     return (
-        <button
-            style={{ backgroundColor: color }}
-            className='btn'
+        <StyledButton
+            style={{
+                backgroundColor: bgColor, position, left, color,
+                textTransform, padding,
+                borderRadius,
+            }}
             onClick={onClick}
         >
             {text}
-        </button>
+        </StyledButton>
     );
 }
 
 Button.defaultProps = {
-    color: "steelblue",
+    color: "#fff",
 };
 
 Button.proptype = {
     text: PropTypes.string,
     color: PropTypes.string,
+    bgColor: PropTypes.string,
+    textTransform: PropTypes.string,
+    padding: PropTypes.string,
+    borderRadius: PropTypes.string,
     onClick: PropTypes.func,
 };
 
