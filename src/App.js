@@ -12,7 +12,7 @@ import {
 
 const theme = {
   colors: {
-    primaryElementColor: '#eb5440',
+    primaryElementColor: 'orange',
     secondaryElementColor: '#4a4b4c',
     firstTertiaryElementColor: '#e8e8e8',
     secondaryTertiaryElementColor: '#c3c3c3',
@@ -23,8 +23,8 @@ const theme = {
     secondaryBackground: '#f6f6f6',
   },
   // fonts: {
-  //   primaryFont: "Open Sans", sans- serif,
-  //   secondaryFont: "Montserrat", sans- serif,
+  //   primaryFont: "Open Sans", sans-serif,
+  //   secondaryFont: "Montserrat", sans-serif,
   // }
 
   mobile: '768px',

@@ -14,7 +14,7 @@ export default function HouseSorting() {
                     left='20px'
                     bgColor="#c3c3c3"
                 />
-                <Button text='Size' />
+                <Button text='Size' bgColor="orange" />
             </Flex>
         </div>
     );
