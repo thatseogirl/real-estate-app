@@ -118,3 +118,12 @@ export const ValidationError = styled.p`
   color: ${({ theme }) => theme.colors.primaryElementColor};
   font: italic 14px "Montserrat", sans-serif;
 `;
+
+export const StyledCard = styled.div`
+  width: 55%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`;
+
+export const CardImage = styled.img`
+  width: 100%;
+`

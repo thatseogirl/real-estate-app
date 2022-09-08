@@ -17,7 +17,20 @@ const GlobalStyles = createGlobalStyle`
     img{
         max-width: 100%;
     }
+    
+    .back_link {
+        color: ${({ theme }) => theme.colors.primaryTextColor};
+        font: 400 16px "Montserrat", sans-serif;
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+  }
 
+    .back_link_img {
+        width: 25px;
+        height: 25px;
+  }
     .image {
         width: 20px;
         height: 20px;
