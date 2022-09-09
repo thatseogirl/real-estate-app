@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   margin: 5px;
   border-radius: 10px;
   cursor: pointer;
-  font: bold 20px "Montserrat", sans-serif;
+  font: bold 18px "Montserrat", sans-serif;
 
   &:hover {
     transform: scale(0.98);

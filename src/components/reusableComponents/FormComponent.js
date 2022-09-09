@@ -15,7 +15,7 @@ const FormComponent = () => {
                     <h3>Create New Listing</h3>
                     <form style={{ marginTop: "2em" }}>
                         <FlexItem>
-                            <label for="streetName">Street name*</label>
+                            <label htmlFor="streetName">Street name*</label>
                             <input
                                 type="text"
                                 v-model="formData.streetName"
@@ -26,7 +26,7 @@ const FormComponent = () => {
 
                         <StyledSection>
                             <FlexItem>
-                                <label for="houseNumber">House Number*</label>
+                                <label htmlFor="houseNumber">House Number*</label>
                                 <input
                                     type="text"
                                     v-model="formData.houseNumber"
@@ -37,7 +37,7 @@ const FormComponent = () => {
                             </FlexItem>
 
                             <FlexItem>
-                                <label for="numberAddition">Addition (optional)</label>
+                                <label htmlFor="numberAddition">Addition (optional)</label>
                                 <input
                                     type="text"
                                     v-model="formData.numberAddition"
@@ -48,7 +48,7 @@ const FormComponent = () => {
                         </StyledSection>
 
                         <FlexItem>
-                            <label for="postalCode">Postal code*</label>
+                            <label htmlFor="postalCode">Postal code*</label>
                             <input
                                 type="text"
                                 v-model="formData.zip"
@@ -58,7 +58,7 @@ const FormComponent = () => {
                         </FlexItem>
 
                         <FlexItem>
-                            <label for="city">City*</label>
+                            <label htmlFor="city">City*</label>
                             <input
                                 type="text"
                                 v-model="formData.city"
@@ -69,8 +69,8 @@ const FormComponent = () => {
 
                         {/* <!-- createListing image --> */}
                         <FlexItem>
-                            <div class="image-upload">
-                                <label for="file-input"
+                            <div className="image-upload">
+                                <label htmlFor="file-input"
                                 >Upload Image (PNG OR JPG)*
                                     <StyledBox>
                                         <AiOutlinePlus className="box_img" />
@@ -88,8 +88,8 @@ const FormComponent = () => {
 
                         {/* <!-- editListing image --> */}
                         {/* <FlexItem>
-                            <div class="image-upload">
-                                <label for="file-input"
+                            <div className="image-upload">
+                                <label htmlFor="file-input"
                                 >Upload Image (PNG OR JPG)*
                                     <StyledBox>
                                         <AiOutlinePlus className="box_img" />
@@ -106,7 +106,7 @@ const FormComponent = () => {
                         </FlexItem> */}
 
                         <FlexItem>
-                            <label for="price">Price*</label>
+                            <label htmlFor="price">Price*</label>
                             <input
                                 type="number"
                                 name="price"
@@ -116,7 +116,7 @@ const FormComponent = () => {
 
                         <StyledSection>
                             <FlexItem>
-                                <label for="size">Size*</label>
+                                <label htmlFor="size">Size*</label>
                                 <input
                                     type="text"
                                     name="size"
@@ -126,11 +126,10 @@ const FormComponent = () => {
 
                             {/* <!-- createListing houseGarage --> */}
                             <FlexItem >
-                                <label for="garage">Garage*</label>
+                                <label htmlFor="garage">Garage*</label>
                                 <select
                                     style={{ cursor: "pointer" }}
                                     name="garage"
-                                    v-model="formData.hasGarage"
                                     id="select"
                                 >
                                     <option value="" disabled>Select</option>
@@ -140,11 +139,10 @@ const FormComponent = () => {
                             </FlexItem>
                             {/* <!-- editListing houseGarage --> */}
                             {/* <FlexItem>
-                                <label for="garage">Garage*</label>
+                                <label htmlFor="garage">Garage*</label>
                                 <select
                                     style={{ cursor: "pointer" }}
                                     name="garage"
-                                    v-model="formData.hasGarage"
                                     id="select"
                                 >
                                     <option value="" disabled>Select</option>
@@ -156,7 +154,7 @@ const FormComponent = () => {
 
                         <StyledSection>
                             <FlexItem>
-                                <label for="bedrooms">Bedrooms*</label>
+                                <label htmlFor="bedrooms">Bedrooms*</label>
                                 <input
                                     type="text"
                                     name="bedrooms"
@@ -165,7 +163,7 @@ const FormComponent = () => {
                             </FlexItem>
 
                             <FlexItem>
-                                <label for="bathrooms">Bathrooms*</label>
+                                <label htmlFor="bathrooms">Bathrooms*</label>
                                 <input
                                     type="text"
                                     name="bathrooms"
@@ -175,19 +173,17 @@ const FormComponent = () => {
                         </StyledSection>
 
                         <FlexItem>
-                            <label for="constructionDate">Construction date*</label>
+                            <label htmlFor="constructionDate">Construction date*</label>
                             <input
                                 type="text"
-                                v-model="formData.constructionYear"
                                 name="constructionYear"
                                 placeholder="e.g 1990"
                             />
                         </FlexItem>
 
                         <FlexItem>
-                            <label for="description">Description*</label>
+                            <label htmlFor="description">Description*</label>
                             <textarea
-                                v-model="formData.description"
                                 placeholder="Enter description"
                             ></textarea>
                         </FlexItem>

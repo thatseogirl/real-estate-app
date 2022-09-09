@@ -4,7 +4,8 @@ import { StyledContainer } from '../assets/styles/Container.styled';
 import { Logo, NavBar, StyledUL, StyledNavigation } from '../assets/styles/StyledNav.styled';
 
 const Navigation = () => {
-    const location = useLocation()
+
+    const location = useLocation();
     const { pathname } = location;
     const splitLocation = pathname.split("/");
     return (

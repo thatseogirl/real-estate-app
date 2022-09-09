@@ -135,16 +135,71 @@ export const CardText = styled.h3`
   text-transform: capitalize;
   margin-bottom: 0.3em;
   color: ${({ theme }) => theme.colors.primaryTextColor};
-  `;
+`;
 
 export const CardFlexItem = styled.div`
-   display: flex;
+  display: flex;
   font: 400 14px "Open Sans", sans-serif;
   gap: 0.25em;
-  color:${({ theme }) => theme.colors.secondaryElementColor};
-  `;
+  color: ${({ theme }) => theme.colors.secondaryElementColor};
+`;
 export const CardDescription = styled.div`
-    margin: 1em 0 1em;
-    font: 400 14px "Open Sans", sans-serif;
-    color:${({ theme }) => theme.colors.secondaryElementColor};
-  `;
+  margin: 1em 0 1em;
+  font: 400 14px "Open Sans", sans-serif;
+  color: ${({ theme }) => theme.colors.secondaryElementColor};
+`;
+export const ModalOverLay = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.secondaryElementColor};
+  opacity: 0.96;
+  font-family: "Montserrat", sans-serif;
+`;
+
+export const ModalContainer = styled.div`
+  text-align: center;
+  background-color: ${({ theme }) => theme.colors.primaryBackground};
+  position: absolute;
+  height: 250px;
+  width: 400px;
+  margin-top: 15%;
+  padding: 1.5em;
+  border-radius: 10px;
+
+  h4 {
+    font: bold 22px "Montserrat", sans-serif;
+  }
+`;
+export const Mobile = styled.nav`
+  overflow: hidden;
+  background-color: ${({ theme }) => theme.colors.primaryBackground};
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .footer_img {
+    width: 60px;
+    height: 60px;
+    color: ${({ theme }) => theme.colors.primaryTextColor};
+  }
+  .active {
+    color: ${({ theme }) => theme.colors.primaryElementColor};
+    width: 60px;
+    height: 60px;
+  }
+`;

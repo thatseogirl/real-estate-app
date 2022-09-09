@@ -47,7 +47,7 @@ const Details = () => {
 
                         <CardFlexItem style={{ marginTop: "0.25em" }}>
                             <StyledMargin>
-                                <AiOutlineEuroCircle />
+                                <AiOutlineEuroCircle className='image' />
                                 <span>475,000</span>
                             </StyledMargin>
                             <StyledMargin style={{ marginLeft: "0.5em" }}>

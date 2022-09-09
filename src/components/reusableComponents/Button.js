@@ -7,7 +7,7 @@ const Button = ({ color, text, onClick, bgColor, position, float, left, textTran
             style={{
                 backgroundColor: bgColor, position, left, color,
                 textTransform, padding,
-                borderRadius, float
+                borderRadius, float,
             }}
             onClick={onClick}
         >
