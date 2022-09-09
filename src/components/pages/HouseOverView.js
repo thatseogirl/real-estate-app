@@ -1,13 +1,12 @@
 import { StyledContainer } from "../../assets/styles/Container.styled"
 import { Flex } from "../../assets/styles/Header.styled"
-import { House, HouseWrapper, StyledAside, Price, Location, WrapperFlexItem, PriceTag } from "../../assets/styles/resuable.styled"
+import { House, HouseWrapper, StyledAside, Price, Location, WrapperFlexItem, StyledMargin } from "../../assets/styles/resuable.styled"
 import EditDelete from "./EditDelete"
 import { Link } from "react-router-dom"
 import {
     MdBathroom,
     MdOutlineBedroomParent,
     MdCropSquare,
-    MdEuro
 } from "react-icons/md"
 import { AiOutlineEuroCircle } from "react-icons/ai"
 
@@ -24,10 +23,10 @@ const HouseOverView = () => {
                         </div>
                         <div>
                             <Link to="/details" className="detail_link">Fass Wilkestraat</Link>
-                            <PriceTag>
+                            <StyledMargin style={{ gap: "0.25em" }}>
                                 <AiOutlineEuroCircle style={{ marginTop: "3px" }} />
                                 <Price>475,000</Price>
-                            </PriceTag>
+                            </StyledMargin>
                             <Location>1363 VV Almere</Location>
                             <Flex style={{ gap: "0.75em", marginTop: "0.75em" }}>
                                 <StyledAside>

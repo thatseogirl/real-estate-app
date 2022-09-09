@@ -52,9 +52,9 @@ export const StyledAside = styled.aside`
   display: flex;
   gap: 0.25em;
 `;
-export const PriceTag = styled.div`
+export const StyledMargin = styled.div`
   display: flex;
-  gap: 0.25em;
+  gap: 0.5em;
   margin-top: 0.5em;
 `;
 export const Location = styled.p`
@@ -126,4 +126,25 @@ export const StyledCard = styled.div`
 
 export const CardImage = styled.img`
   width: 100%;
-`
+`;
+export const CardBody = styled.div`
+  padding: 0.95em;
+`;
+export const CardText = styled.h3`
+  font: bold 22px "Montserrat", sans-serif;
+  text-transform: capitalize;
+  margin-bottom: 0.3em;
+  color: ${({ theme }) => theme.colors.primaryTextColor};
+  `;
+
+export const CardFlexItem = styled.div`
+   display: flex;
+  font: 400 14px "Open Sans", sans-serif;
+  gap: 0.25em;
+  color:${({ theme }) => theme.colors.secondaryElementColor};
+  `;
+export const CardDescription = styled.div`
+    margin: 1em 0 1em;
+    font: 400 14px "Open Sans", sans-serif;
+    color:${({ theme }) => theme.colors.secondaryElementColor};
+  `;
