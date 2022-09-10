@@ -4,6 +4,11 @@ export const StyledContainer = styled.div`
   width: 75%;
   max-width: 100%;
   margin: auto;
+
+  @media (max-width: ${({ theme }) => theme.mobile.ipad}) {
+    width: 100%;
+    padding: 0 1.75em ;
+    }
 `;
 
 export const StyledMainContainer = styled.div`

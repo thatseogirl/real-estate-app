@@ -7,10 +7,10 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
     }
 
-    body{
+    body, html{
         background-color: ${({ theme }) => theme.colors.secondaryBackground};
         width: 100%;
-        height: 100%;
+        height: 100vh;
         margin: 0;
     }
 
@@ -25,6 +25,9 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         gap: 10px;
         margin-bottom: 20px;
+        @media (max-width: ${({ theme }) => theme.mobile.ipad}) {
+            padding: 0.25em ;
+    }
   }
 
     .back_link_img {

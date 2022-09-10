@@ -10,6 +10,10 @@ export const SearchForm = styled.form`
   align-items: center;
   padding: 0.75em 1.5em;
 
+  @media (max-width: ${({ theme }) => theme.mobile.ipad}) {
+    width: 100%;
+  }
+
   input {
     width: 100%;
     outline: 0;
@@ -23,10 +27,11 @@ export const FlexWrapper = styled.div`
 `;
 
 export const HouseWrapper = styled.div`
-  margin-top: 2.5em;
+  margin-top: 1.5em;
   font-family: "Open Sans", sans-serif;
   background-color: ${({ theme }) => theme.colors.primaryBackground};
   border-radius: 10px;
+  height: 100%;
 `;
 export const WrapperFlexItem = styled.div`
   display: flex;
@@ -39,6 +44,10 @@ export const WrapperFlexItem = styled.div`
     color: ${({ theme }) => theme.colors.primaryTextColor};
     text-decoration: none;
     text-transform: capitalize;
+
+    @media (max-width: ${({ theme }) => theme.mobile.phone}) {
+      font-size: 14px;
+    }
   }
 `;
 export const House = styled.img`
@@ -47,6 +56,11 @@ export const House = styled.img`
   object-fit: cover;
   object-position: bottom;
   border-radius: 10px;
+
+  @media (max-width: ${({ theme }) => theme.mobile.phone}) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 export const StyledAside = styled.aside`
   display: flex;
@@ -56,16 +70,28 @@ export const StyledMargin = styled.div`
   display: flex;
   gap: 0.5em;
   margin-top: 0.5em;
+  @media (max-width: ${({ theme }) => theme.mobile.phone}) {
+    margin-top: 0;
+  }
 `;
 export const Location = styled.p`
   font: 400 16px "Open Sans", sans-serif;
   margin-top: 0.5em;
   color: ${({ theme }) => theme.colors.secondaryTertiaryElementColor};
+
+  @media (max-width: ${({ theme }) => theme.mobile.phone}) {
+    font-size: 14px;
+    margin-top: 0.25em;
+  }
 `;
 
 export const Price = styled.p`
   font: 600 16px "Open Sans", sans-serif;
   color: ${({ theme }) => theme.colors.secondaryElementColor};
+
+  @media (max-width: ${({ theme }) => theme.mobile.phone}) {
+    font-size: 14px;
+  }
 `;
 
 export const FlexItem = styled.div`
@@ -91,12 +117,13 @@ export const FlexItem = styled.div`
     padding-bottom: 6em;
   }
 `;
-
-export const StyledSection = styled.section`
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1.5em;
+export const FormWidth = styled.div`
+  width: 50%;
+  @media (max-width: ${({ theme }) => theme.mobile.ipadAir}) {
+    width: 100%;
+  }
 `;
+
 export const StyledBox = styled.div`
   border: 2px dashed ${({ theme }) => theme.colors.secondaryTextColor};
   stroke-width: 5;
@@ -122,6 +149,16 @@ export const ValidationError = styled.p`
 export const StyledCard = styled.div`
   width: 55%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  @media (max-width: ${({ theme }) => theme.mobile.ipadAir}) {
+    width: 90%;
+    margin: auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile.ipad}) {
+    width: 90%;
+    margin: auto;
+  }
 `;
 
 export const CardImage = styled.img`

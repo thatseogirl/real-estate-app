@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
     padding: 7em 0 0em;
 
+    @media (max-width: ${({ theme }) => theme.mobile.ipad}) {
+      padding: 2em 0 0 ;
+    }
+
  h3 {
     margin: 0;
     font: bold 32px "Montserrat", sans-serif;

@@ -10,7 +10,7 @@ import {
     CardDescription,
     StyledMargin,
     CardFlexItem,
-} from "../assets/styles/resuable.styled";
+} from "../assets/styles/reusable.styled";
 import { Flex } from "../assets/styles/Header.styled";
 import { GoLocation } from "react-icons/go";
 import {
@@ -20,10 +20,13 @@ import {
     MdGarage,
 } from "react-icons/md";
 import { AiOutlineEuroCircle, AiOutlineHome } from "react-icons/ai";
+import useMediaQuery from "../components/hooks/useMediaQuery";
 
 const Details = () => {
+
+    const breakPoint = useMediaQuery("(max-width: 768px)");
     return (
-        <StyledContainer style={{ padding: "7em 0" }}>
+        <StyledContainer style={{ padding: breakPoint ? "2em 0" : "7em 0" }}>
             <Link to='/' className='back_link'>
                 <BiArrowBack className='back_link_img' />
                 Back to Overview

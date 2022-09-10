@@ -1,5 +1,5 @@
 import React from 'react'
-import { ModalOverLay, ModalContainer, FlexItem } from "../../assets/styles/resuable.styled"
+import { ModalOverLay, ModalContainer, FlexItem } from "../../assets/styles/reusable.styled"
 import Button from "./Button"
 const Modal = ({ modalOpen, onClose }) => {
     if (!modalOpen) {

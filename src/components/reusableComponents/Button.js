@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import StyledButton from "../../assets/styles/Button.styled";
 
-const Button = ({ color, text, onClick, bgColor, position, float, left, textTransform, padding, borderRadius }) => {
+const Button = ({ color, text, onClick, bgColor, position, width, float, left, textTransform, padding, borderRadius }) => {
     return (
         <StyledButton
             style={{
                 backgroundColor: bgColor, position, left, color,
                 textTransform, padding,
-                borderRadius, float,
+                borderRadius, float, width
             }}
             onClick={onClick}
         >

@@ -25,7 +25,11 @@ const theme = {
     secondaryBackground: "#f6f6f6",
   },
 
-  mobile: "768px",
+  mobile: {
+    ipadAir: "990px",
+    ipad: "768px",
+    phone: "500px"
+  },
 };
 
 export const App = () => {
