@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledNavigation = styled.div`
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.primaryBackground};
   padding: 0.75em 0;
 `;

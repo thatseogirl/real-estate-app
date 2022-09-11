@@ -59,7 +59,7 @@ export const House = styled.img`
 
   @media (max-width: ${({ theme }) => theme.mobile.phone}) {
     width: 80px;
-    height: 80px;
+    height:70px;
   }
 `;
 export const StyledAside = styled.aside`
