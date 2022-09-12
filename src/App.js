@@ -11,6 +11,7 @@ import {
   Navigation,
 } from "./components";
 import MobileNav from "./components/MobileNav";
+import { useEffect, useState } from "react";
 
 const theme = {
   colors: {
@@ -34,6 +35,20 @@ const theme = {
 
 export const App = () => {
   const breakPoint = useMediaQuery("(max-width: 768px)");
+  const [house, setHouse] = useState([]);
+  const fetchTask = async () => {
+    const respond = await fetch("https://my-json-server.typicode.com/thatseogirl/Task-tracker/tasks");
+    const data = await respond.json();
+    return data;
+  };
+  useEffect(() => {
+    const getTask = async () => {
+      const taskFromServer = await fetchTask();
+      setHouse(taskFromServer);
+    };
+
+    getTask();
+  }, [])
   return (
     <Router>
       <ThemeProvider theme={theme}>

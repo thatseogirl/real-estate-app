@@ -55,7 +55,7 @@ const Details = () => {
                             </StyledMargin>
                             <StyledMargin style={{ marginLeft: "0.5em" }}>
                                 <MdCropSquare className='image' />
-                                <span>65m2</span>
+                                <span>65m<sup>2</sup></span>
                             </StyledMargin>
                             <StyledMargin style={{ marginLeft: "0.5em" }}>
                                 <AiOutlineHome className='image' />
