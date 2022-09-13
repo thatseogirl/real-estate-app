@@ -1,5 +1,5 @@
 {
-  "house": [
+  "houses": [
     {
       "id": 1,
       "streetName": "New ZeeburgilandStraat",
@@ -95,6 +95,5 @@
       "construction date": 2020,
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid amet inventore architecto magnam ipsam libero consequatur, harum dignissimos voluptate nam nulla modi sapiente voluptates fugit! Alias nam autem iure, obcaecati et dicta laudantium ut sit porro quia voluptates, doloribus exercitationem asperiores saepe, unde quod soluta ex inventore quae. Dolor!"
     }
-    
   ]
 }
