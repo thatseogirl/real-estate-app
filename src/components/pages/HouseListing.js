@@ -17,53 +17,54 @@ const HouseListing = () => {
     const breakPoint = useMediaQuery("(max-width: 768px)");
     const dispatch = useDispatch();
     const getHouses = useSelector(houses)
-    // console.log(getHouse.map((data) => (
-    //     data.stretName
-    // )))
+
     useEffect(() => {
         dispatch(fetchAllHouses());
     }, [dispatch]);
 
     //console.log(getHouses);
-    //getHouses.map((data) => console.log(data[0].id));
+    // getHouses.map((data) => console.log(data.image));
 
     return (
-        <HouseWrapper>
-            <Flex>
-                {getHouses.map((data) => (
-                    <WrapperFlexItem key={data.id}>
-                        <div>
-                            <Link to="/details">
-                                <House src={data.image} alt="home" />
-                            </Link>
-                        </div>
-                        <div>
-                            <Link to="/details" className="detail_link">Fass Wilkestraat</Link>
-                            <StyledMargin style={{ gap: "0.25em" }}>
-                                <AiOutlineEuroCircle style={{ marginTop: "3px" }} />
-                                <Price>475,000</Price>
-                            </StyledMargin>
-                            <Location>1363 VV Almere</Location>
-                            <Flex style={{ gap: breakPoint ? "0.25em" : "0.75em", marginTop: breakPoint ? "0.25em" : "0.75em" }}>
-                                <StyledAside>
-                                    <MdBathroom className="image" />
-                                    <span>2</span>
-                                </StyledAside>
-                                <StyledAside>
-                                    <MdOutlineBedroomParent className="image" />
-                                    <span>4</span>
-                                </StyledAside>
-                                <StyledAside>
-                                    <MdCropSquare className="image" />
-                                    <span>4m<sup>2</sup></span>
-                                </StyledAside>
-                            </Flex>
-                        </div>
-                    </WrapperFlexItem>
-                ))}
-                <EditDelete />
-            </Flex>
-        </HouseWrapper>
+        <>
+            {getHouses.map((data) => (
+                <HouseWrapper key={data.id}>
+                    <Flex>
+                        <WrapperFlexItem >
+                            <div>
+                                <Link to="/details">
+                                    <House src={data.image} alt="home" />
+                                </Link>
+                            </div>
+                            <div>
+                                <Link to="/details" className="detail_link">{data.streetName}</Link>
+                                <StyledMargin style={{ gap: "0.25em" }}>
+                                    <AiOutlineEuroCircle style={{ marginTop: "3px" }} />
+                                    <Price>{data.price}</Price>
+                                </StyledMargin>
+                                <Location></Location>
+                                <Flex style={{ gap: breakPoint ? "0.25em" : "0.75em", marginTop: breakPoint ? "0.25em" : "0.75em" }}>
+                                    <StyledAside>
+                                        <MdBathroom className="image" />
+                                        <span>{data.bathrooms}</span>
+                                    </StyledAside>
+                                    <StyledAside>
+                                        <MdOutlineBedroomParent className="image" />
+                                        <span></span>
+                                    </StyledAside>
+                                    <StyledAside>
+                                        <MdCropSquare className="image" />
+                                        <span>m<sup>2</sup></span>
+                                    </StyledAside>
+                                </Flex>
+                            </div>
+                        </WrapperFlexItem>
+
+                        <EditDelete />
+                    </Flex>
+                </HouseWrapper>
+            ))}
+        </>
     )
 }
 

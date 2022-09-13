@@ -2,7 +2,7 @@
   "houses": [
     {
       "id": 1,
-      "streetName": "New ZeeburgilandStraat",
+      "streetName": "ZeeburgilandStraat",
       "houseNumber": 146,
       "addition": "L",
       "zip": "1363VV",
@@ -49,7 +49,7 @@
     },
     {
       "id": 4,
-      "streetName": "Fass Wilkestraat",
+      "streetName": "Wilkestraat",
       "houseNumber": 179,
       "addition": "S",
       "zip": "1565MF",
@@ -65,7 +65,7 @@
     },
     {
       "id": 5,
-      "streetName": "Liegrow Matterstraat",
+      "streetName": "Matterstraat",
       "houseNumber":100,
       "addition": "F",
       "zip": "1095DM",
@@ -81,7 +81,7 @@
     },
     {
       "id": 6,
-      "streetName": "Peter Ousterstraat",
+      "streetName": "Ousterstraat",
       "houseNumber": 16,
       "addition": "G",
       "zip": "1360VG",

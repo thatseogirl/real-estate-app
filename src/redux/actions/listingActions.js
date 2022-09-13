@@ -7,11 +7,9 @@ import {
 export const fetchAllHouses = () => async dispatch => {
     try {
         const res = await axiosClient.get("/houses")
-        const data = res.json();
-        console.log(data);
         dispatch({
             type: FETCH_LISTING,
-            payload: await data,
+            payload: res.data,
         })
     } catch (error) {
         console.error(error);

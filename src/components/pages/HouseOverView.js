@@ -5,9 +5,6 @@ const HouseOverView = () => {
     return (
         <StyledContainer>
             <HouseListing />
-            <HouseListing />
-            <HouseListing />
-            <HouseListing />
         </StyledContainer>
     )
 }

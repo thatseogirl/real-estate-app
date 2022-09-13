@@ -13,13 +13,13 @@ function houseListingReducer(state = initialState, action) {
         case FETCH_LISTING: {
             return {
                 ...state,
-                getHouses: [action.payload]
+                getHouses: action.payload
             }
         }
         case ADD_LISTING: {
             return {
                 ...state,
-                addHouse: [action.payload]
+                addHouse: action.payload
             }
         }
         default:
