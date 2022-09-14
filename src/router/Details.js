@@ -21,8 +21,21 @@ import {
 } from "react-icons/md";
 import { AiOutlineEuroCircle, AiOutlineHome } from "react-icons/ai";
 import useMediaQuery from "../components/hooks/useMediaQuery";
+import { houses, fetchAllHouses } from "../redux/actions/listingActions";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const Details = () => {
+    const { id } = useParams();
+    const dispatch = useDispatch();
+    const getHouses = useSelector(houses);
+    // eslint-disable-next-line eqeqeq
+    const getCurrentHouse = getHouses.filter((element) => element.id == id);
+
+    useEffect(() => {
+        dispatch(fetchAllHouses());
+    }, [dispatch]);
 
     const breakPoint = useMediaQuery("(max-width: 768px)");
     return (
@@ -31,65 +44,58 @@ const Details = () => {
                 <BiArrowBack className='back_link_img' />
                 Back to Overview
             </Link>
-            <StyledCard>
-                <CardImage
-                    src='https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'
-                    alt='house'
-                />
-                <CardBody>
-                    <div>
-                        <Flex>
-                            <CardText>Fass Wilkestraat</CardText>
-                            <EditDelete />
-                        </Flex>
-                        <CardFlexItem>
-                            <GoLocation className='image' />
-                            <span>1363VV</span>
-                            <span>Almere</span>
-                        </CardFlexItem>
+            {getCurrentHouse.map((element) => (
+                <StyledCard key={element.id}>
+                    <CardImage src={element.image} alt='house' />
+                    <CardBody>
+                        <div>
+                            <Flex>
+                                <CardText>{element.streetName}</CardText>
+                                <EditDelete />
+                            </Flex>
+                            <CardFlexItem>
+                                <GoLocation className='image' />
+                                <span>{element.zip}</span>
+                                <span>{element.city}</span>
+                            </CardFlexItem>
 
-                        <CardFlexItem style={{ marginTop: "0.25em" }}>
-                            <StyledMargin>
-                                <AiOutlineEuroCircle className='image' />
-                                <span>475,000</span>
-                            </StyledMargin>
-                            <StyledMargin style={{ marginLeft: "0.5em" }}>
-                                <MdCropSquare className='image' />
-                                <span>65m<sup>2</sup></span>
-                            </StyledMargin>
-                            <StyledMargin style={{ marginLeft: "0.5em" }}>
-                                <AiOutlineHome className='image' />
-                                <span>2022</span>
-                            </StyledMargin>
-                        </CardFlexItem>
-                        <CardFlexItem style={{ marginTop: "0.25em" }}>
-                            <StyledMargin>
-                                <MdOutlineBedroomParent className='image' />
-                                <span>4</span>
-                            </StyledMargin>
-                            <StyledMargin style={{ marginLeft: "0.5em" }}>
-                                <MdBathroom className='image' />
-                                <span>2</span>
-                            </StyledMargin>
-                            <StyledMargin style={{ marginLeft: "0.5em" }}>
-                                <MdGarage className='image' />
-                                <span>Yes</span>
-                            </StyledMargin>
-                        </CardFlexItem>
-                        <CardDescription>
-                            <p>
-                                De woning is gelegen in een Rijksmonument aan het begin van de
-                                Spuistraat net om de hoek bij het oude Kattegat en de
-                                Koepelkerk. De ligging van het pand is ideaal. Op loopafstand
-                                van het Centraal Station maar ook van o.a. de Kalverstraat en
-                                Nieuwendijk met een diversiteit aan winkels. En om de hoek treft
-                                u een supermarkt waar u terecht kunt voor de dagelijkse
-                                boodschappen.
-                            </p>
-                        </CardDescription>
-                    </div>
-                </CardBody>
-            </StyledCard>
+                            <CardFlexItem style={{ marginTop: "0.25em" }}>
+                                <StyledMargin>
+                                    <AiOutlineEuroCircle className='image' />
+                                    <span>{element.price}</span>
+                                </StyledMargin>
+                                <StyledMargin style={{ marginLeft: "0.5em" }}>
+                                    <MdCropSquare className='image' />
+                                    <span>
+                                        {element.size}m<sup>2</sup>
+                                    </span>
+                                </StyledMargin>
+                                <StyledMargin style={{ marginLeft: "0.5em" }}>
+                                    <AiOutlineHome className='image' />
+                                    <span>{element.constructionYear}</span>
+                                </StyledMargin>
+                            </CardFlexItem>
+                            <CardFlexItem style={{ marginTop: "0.25em" }}>
+                                <StyledMargin>
+                                    <MdOutlineBedroomParent className='image' />
+                                    <span>{element.bedrooms}</span>
+                                </StyledMargin>
+                                <StyledMargin style={{ marginLeft: "0.5em" }}>
+                                    <MdBathroom className='image' />
+                                    <span>{element.bathrooms}</span>
+                                </StyledMargin>
+                                <StyledMargin style={{ marginLeft: "0.5em" }}>
+                                    <MdGarage className='image' />
+                                    <span>{element.hasGarage}</span>
+                                </StyledMargin>
+                            </CardFlexItem>
+                            <CardDescription>
+                                <p>{element.description}</p>
+                            </CardDescription>
+                        </div>
+                    </CardBody>
+                </StyledCard>
+            ))}
         </StyledContainer>
     );
 };

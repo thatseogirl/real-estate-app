@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 import Button from "./reusableComponents/Button";
 import { Logo } from "../assets/styles/StyledNav.styled";
-import estate from "../assets/images/estate.png"
+import estate from "../assets/images/estate.png";
 import { Flex, StyledHeader } from "../assets/styles/Header.styled";
 import { StyledContainer } from "../assets/styles/Container.styled";
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -16,14 +16,7 @@ const Header = () => {
         <StyledHeader>
             <StyledContainer>
                 <Flex>
-                    {breakPoint ?
-                        (
-                            <Logo src={estate} alt="Logo" />
-                        ) :
-                        (
-                            <h3>Houses</h3>
-                        )
-                    }
+                    {breakPoint ? <Logo src={estate} alt='Logo' /> : <h3>Houses</h3>}
                     <div>
                         <Link to='/createListing' className='new_listing_link'>
                             <FiPlus

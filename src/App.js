@@ -29,7 +29,7 @@ const theme = {
   mobile: {
     ipadAir: "990px",
     ipad: "768px",
-    phone: "500px"
+    phone: "500px",
   },
 };
 
@@ -45,8 +45,8 @@ export const App = () => {
             <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/createListing' element={<CreateListing />}></Route>
-            <Route path='/editListing' element={<EditListing />}></Route>
-            <Route path='/details' element={<Details />}></Route>
+            <Route path='/editListing/:id' element={<EditListing />}></Route>
+            <Route path='/details/:id' element={<Details />}></Route>
           </Routes>
         </>
       </ThemeProvider>

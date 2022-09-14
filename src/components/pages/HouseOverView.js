@@ -1,12 +1,12 @@
-import { StyledContainer } from "../../assets/styles/Container.styled"
-import HouseListing from "./HouseListing"
+import { StyledContainer } from "../../assets/styles/Container.styled";
+import HouseListing from "./HouseListing";
 
-const HouseOverView = () => {
+const HouseOverView = ({ getHouses, newHouseListing }) => {
     return (
         <StyledContainer>
-            <HouseListing />
+            <HouseListing getHouses={getHouses} newHouseListing={newHouseListing} />
         </StyledContainer>
-    )
-}
+    );
+};
 
-export default HouseOverView
+export default HouseOverView;

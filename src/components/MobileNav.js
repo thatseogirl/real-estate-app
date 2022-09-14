@@ -22,7 +22,9 @@ const MobileNav = () => {
                     <li>
                         <NavLink to='/about'>
                             <IoMdInformationCircleOutline
-                                className={splitLocation[1] === "about" ? "active" : "footer_img"}
+                                className={
+                                    splitLocation[1] === "about" ? "active" : "footer_img"
+                                }
                             />
                         </NavLink>
                     </li>

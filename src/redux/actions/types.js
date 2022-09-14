@@ -1,2 +1,7 @@
 export const FETCH_LISTING = 'FETCH_LISTING';
 export const ADD_LISTING = 'ADD_LISTING';
+export const EDIT_LISTING = 'EDIT_LISTING';
+export const DELETE_LISTING = 'DELETE_LISTING';
+export const SEARCH_LISTING = 'SEARCH_LISTING';
+export const HANDLE_PRICE = 'HANDLE_PRICE';
+export const HANDLE_SIZE = 'HANDLE_SIZE';
