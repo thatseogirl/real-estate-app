@@ -3,13 +3,13 @@ import {
     StyledContainer,
     StyledMainContainer,
 } from "../assets/styles/Container.styled";
+import EmptyState from "../components/pages/EmptyState";
 import { Flex } from "../assets/styles/Header.styled";
 import { SearchForm, FlexWrapper } from "../assets/styles/reusable.styled";
 import { Header, HouseOverView, HouseSorting } from "../components";
 import { FiSearch } from "react-icons/fi";
-import { MdClear } from "react-icons/md";
 import useMediaQuery from "../components/hooks/useMediaQuery";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
     fetchAllHouses,
     filteredListing,
@@ -20,7 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Home = () => {
     const breakPoint = useMediaQuery("(max-width: 768px)");
-    const [searchValue, setSearchValue] = useState("");
+    const result = useSelector((state) => state.searchTerm)
     const dispatch = useDispatch();
     const getHouses = useSelector(houses);
     const newHouseListing = useSelector(newListing);
@@ -29,12 +29,8 @@ const Home = () => {
         dispatch(fetchAllHouses());
     }, [dispatch]);
 
-    const clearSearch = () => {
-        setSearchValue("");
-    };
     const handleChange = (e) => {
-        const searchTerm = e.target.value;
-        dispatch(filteredListing(searchTerm));
+        dispatch(filteredListing(e.target.value));
     };
     return (
         <StyledMainContainer>
@@ -53,12 +49,13 @@ const Home = () => {
                                 type='text'
                                 placeholder='Search for a house'
                                 onChange={handleChange}
-                                value={searchValue}
+                                value={result}
                             />
-                            <MdClear onClick={clearSearch} />
                         </SearchForm>
                         <HouseSorting getHouses={getHouses} />
                     </Flex>
+                    {getHouses.length === 0 ? <EmptyState /> :
+                        <p>{getHouses.length} results found</p>}
                 </FlexWrapper>
             </StyledContainer>
             <HouseOverView getHouses={getHouses} newHouseListing={newHouseListing} />

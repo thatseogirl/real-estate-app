@@ -29,30 +29,25 @@ function houseListingReducer(state = initialState, action) {
         }
         case DELETE_LISTING: {
             return {
-                getHouses: [
-                    ...state.getHouses.filter((item) => item !== action.payload),
-                ],
+                getHouses: state.getHouses.filter((item) => item !== action.payload),
             };
         }
         case SEARCH_LISTING: {
             return {
-                ...state,
-                getHouses: state.searchTerm
-                    ? state.getHouses.filter(
-                        (item) =>
-                            item.city
-                                .toLowerCase()
-                                .includes(state.searchTerm.toLowerCase()) ||
+                searchTerm: action.payload,
+                getHouses: state.searchTerm === "" ? state.getHouses :
+                    state.getHouses.filter((item) => {
+                        return item.city
+                            .toLowerCase()
+                            .includes(state.searchTerm.toLowerCase()) ||
                             item.streetName
                                 .toLowerCase()
                                 .includes(state.searchTerm.toLowerCase())
-                    )
-                    : state.getHouses,
-            };
+                    })
+            }
         }
         case HANDLE_PRICE: {
             return {
-                ...state,
                 getHouses: state.getHouses.sort(
                     (first, second) => first.price - second.price
                 ),
@@ -60,7 +55,6 @@ function houseListingReducer(state = initialState, action) {
         }
         case HANDLE_SIZE: {
             return {
-                ...state,
                 getHouses: state.getHouses.sort(
                     (first, second) => first.size - second.size
                 ),

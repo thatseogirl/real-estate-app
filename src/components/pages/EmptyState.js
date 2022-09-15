@@ -1,8 +1,17 @@
 import React from 'react'
+import { StyledContainer } from '../../assets/styles/Container.styled'
+import { EmptyHouse } from '../../assets/styles/reusable.styled'
 
 const EmptyState = () => {
     return (
-        <div>EmptyState</div>
+        <StyledContainer>
+            <EmptyHouse>
+                <img src='https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' alt='empty house'
+                    className="input_image"
+                />
+                <p>No result found. <br />Please try another keyword.</p>
+            </EmptyHouse>
+        </StyledContainer>
     )
 }
 

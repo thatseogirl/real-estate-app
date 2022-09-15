@@ -203,7 +203,7 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                                 </FlexItem>
 
                                 <FlexItem>
-                                    <label htmlFor='constructionDate'>Construction date*</label>
+                                    <label htmlFor='constructionYear'>Construction Year*</label>
                                     <input
                                         type='text'
                                         name='constructionYear'
@@ -219,6 +219,7 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                                         placeholder='Enter description'
                                         onChange={handleChange}
                                         value={house.description}
+                                        name='description'
                                     ></textarea>
                                 </FlexItem>
                                 <ValidationError>Required field missing</ValidationError>
@@ -271,18 +272,18 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                             </FlexItem>
 
                             <FlexItem>
-                                <label htmlFor='numberAddition'>Addition (optional)</label>
+                                <label htmlFor='addition'>Addition (optional)</label>
                                 <input
                                     type='text'
                                     onChange={handleChange}
                                     value={addListing.addition}
-                                    name='numberAddition'
+                                    name='addition'
                                     placeholder='e.g A'
                                 />
                             </FlexItem>
 
                             <FlexItem>
-                                <label htmlFor='postalCode'>Postal code*</label>
+                                <label htmlFor='zip'>Postal code*</label>
                                 <input
                                     type='text'
                                     onChange={handleChange}
@@ -382,7 +383,7 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                             </FlexItem>
 
                             <FlexItem>
-                                <label htmlFor='constructionDate'>Construction date*</label>
+                                <label htmlFor='constructionYear'>Construction Year*</label>
                                 <input
                                     type='text'
                                     name='constructionYear'
@@ -398,6 +399,7 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                                     placeholder='Enter description'
                                     onChange={handleChange}
                                     value={addListing.description}
+                                    name='description'
                                 ></textarea>
                             </FlexItem>
                             <ValidationError>Required field missing</ValidationError>

@@ -24,6 +24,11 @@ export const SearchForm = styled.form`
 `;
 export const FlexWrapper = styled.div`
   padding-top: 1.25em;
+
+  p {
+    font: bold 22px "Montserrat", sans-serif;
+    margin-top: 1em
+  }
 `;
 
 export const HouseWrapper = styled.div`
@@ -240,3 +245,19 @@ export const Mobile = styled.nav`
     height: 60px;
   }
 `;
+export const EmptyHouse = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+
+  img {
+  width: 50%;
+  margin-bottom: 1.5em;
+}
+  p {
+  text-align: center;
+  font: 500 22px ;
+}
+`

@@ -22,6 +22,7 @@ const HouseListing = ({ getHouses, newHouseListing }) => {
     const breakPoint = useMediaQuery("(max-width: 768px)");
     return (
         <>
+
             {getHouses.map(
                 (data) => (
                     <HouseWrapper key={data.id}>

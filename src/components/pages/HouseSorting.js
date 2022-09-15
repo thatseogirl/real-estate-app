@@ -6,7 +6,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { sortByPrice, sortBySize } from "../../redux/actions/listingActions";
 import { useState } from "react";
 
-export default function HouseSorting() {
+export default function HouseSorting({ getHouses }) {
     const dispatch = useDispatch();
     const breakPoint = useMediaQuery("(max-width: 768px)");
     const [sortPrice, setSortPrice] = useState(false);
