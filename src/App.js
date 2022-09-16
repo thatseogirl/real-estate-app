@@ -11,7 +11,6 @@ import {
   Navigation,
 } from "./components";
 import MobileNav from "./components/MobileNav";
-import { useEffect, useState } from "react";
 
 const theme = {
   colors: {

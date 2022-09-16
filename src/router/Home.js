@@ -24,6 +24,9 @@ const Home = () => {
     const dispatch = useDispatch();
     const getHouses = useSelector(houses);
     const newHouseListing = useSelector(newListing);
+    const logLenght = getHouses.length
+
+    console.log(logLenght)
 
     useEffect(() => {
         dispatch(fetchAllHouses());

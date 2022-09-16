@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -19,6 +19,7 @@ import Button from "./Button";
 import { addNewListing } from "../../redux/actions/listingActions";
 
 const FormComponent = ({ editListing, getCurrentHouse }) => {
+    const navigate = useNavigate();
     const breakPoint = useMediaQuery("(max-width: 768px)");
     const dispatch = useDispatch();
     const [addListing, setAddListing] = useState({
@@ -48,9 +49,11 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(addNewListing(addListing));
+        navigate("/")
     };
     const handleEdit = (event) => {
         event.preventDefault();
+        navigate("/")
     };
     return (
         <StyledFormWrapper>
