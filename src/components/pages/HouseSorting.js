@@ -6,19 +6,22 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { sortByPrice, sortBySize } from "../../redux/actions/listingActions";
 import { useState } from "react";
 
-export default function HouseSorting({ getHouses }) {
+export default function HouseSorting() {
     const dispatch = useDispatch();
     const breakPoint = useMediaQuery("(max-width: 768px)");
     const [sortPrice, setSortPrice] = useState(false);
     const [sortSize, setSortSize] = useState(false);
 
     const handlePrice = () => {
-        dispatch(sortByPrice());
+        const sortOrder = "asc";
+        dispatch(sortByPrice(sortOrder));
         setSortSize(false);
         setSortPrice(true);
     };
+    
     const handleSize = () => {
-        dispatch(sortBySize());
+        const sortOrder = "desc";
+        dispatch(sortBySize(sortOrder));
         setSortSize(true);
         setSortPrice(false);
     };

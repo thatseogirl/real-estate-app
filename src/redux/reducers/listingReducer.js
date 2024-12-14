@@ -48,18 +48,25 @@ function houseListingReducer(state = initialState, action) {
         }
         case HANDLE_PRICE: {
             return {
-                getHouses: state.getHouses.sort(
-                    (first, second) => first.price - second.price
-                ),
+                ...state,
+                getHouses: [...state.getHouses].sort((first, second) => {
+                    return action.payload === "asc"
+                        ? first.price - second.price
+                        : second.price - first.price;
+                }),
             };
         }
         case HANDLE_SIZE: {
             return {
-                getHouses: state.getHouses.sort(
-                    (first, second) => first.size - second.size
-                ),
+                ...state,
+                getHouses: [...state.getHouses].sort((first, second) => {
+                    return action.payload === "asc"
+                        ? first.size - second.size
+                        : second.size - first.size;
+                }),
             };
         }
+        
 
         default:
             return state;

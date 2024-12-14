@@ -23,10 +23,7 @@ const Home = () => {
     const result = useSelector((state) => state.searchTerm)
     const dispatch = useDispatch();
     const getHouses = useSelector(houses);
-    const newHouseListing = useSelector(newListing);
-    const logLenght = getHouses.length
-
-    console.log(logLenght)
+    const newHouseListing = useSelector(newListing)
 
     useEffect(() => {
         dispatch(fetchAllHouses());
