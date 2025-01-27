@@ -23,7 +23,6 @@ function houseListingReducer(state = initialState, action) {
     }
 
     case ADD_LISTING: {
-      console.log(action.payload);
       return {
         ...state,
         getHouses: action.payload, // Add new house to the existing array

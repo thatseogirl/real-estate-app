@@ -27,10 +27,15 @@ const HouseListing = () => {
 
   // Determine which list to render (prioritize new listings if available)
   const houseData = newHouseListing?.length > 0 ? newHouseListing : getHouses;
+  const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
+    currency: "EUR",
+    style: "currency",
+  });
 
   return (
     <>
-      {houseData && houseData.length > 0 && (
+      {houseData &&
+        houseData.length > 0 &&
         houseData.map((data) => (
           <HouseWrapper key={data.id}>
             <Flex>
@@ -45,8 +50,7 @@ const HouseListing = () => {
                     {data.streetName}
                   </Link>
                   <StyledMargin style={{ gap: "0.25em" }}>
-                    <AiOutlineEuroCircle style={{ marginTop: "3px" }} />
-                    <Price>{data.price}</Price>
+                    <Price>{CURRENCY_FORMATTER.format(data.price)}</Price>
                   </StyledMargin>
                   <Location>
                     {data.city} {data.zip}
@@ -77,8 +81,7 @@ const HouseListing = () => {
               <EditDelete id={data.id} />
             </Flex>
           </HouseWrapper>
-        ))
-      ) }
+        ))}
     </>
   );
 };
