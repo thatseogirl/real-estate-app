@@ -3,17 +3,17 @@ import {
     ModalOverLay,
     ModalContainer,
     FlexItem,
-} from "../../assets/styles/reusable.styled";
+} from "../styles/reusable.styled";
 import Button from "./Button";
 import { useDispatch } from "react-redux";
-import { removeListing } from "../../redux/actions/listingActions";
+import { removeListing } from "../redux/actions/listingActions";
 
-import { useEffect } from "react";
 const Modal = ({ modalOpen, onClose, id }) => {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(removeListing());
-    }, [dispatch]);
+   const handleRemoveListing = (id) => {
+    dispatch(removeListing(id))
+    onClose()
+   }
     if (!modalOpen) {
         return null;
     }
@@ -33,7 +33,7 @@ const Modal = ({ modalOpen, onClose, id }) => {
                         bgColor='orange'
                         textTransform='uppercase'
                         padding='0.75em'
-                        onClick={() => dispatch(removeListing(id))}
+                        onClick={() => handleRemoveListing(id)}
                     />
                     <Button
                         text='No, Go Back'

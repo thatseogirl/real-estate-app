@@ -10,13 +10,13 @@ import {
     StyledBox,
     ValidationError,
     FormWidth,
-} from "../../assets/styles/reusable.styled";
+} from "../styles/reusable.styled";
 import {
     StyledContainer,
     StyledFormWrapper,
-} from "../../assets/styles/Container.styled";
+} from "../styles/Container.styled";
 import Button from "./Button";
-import { addNewListing } from "../../redux/actions/listingActions";
+import { addNewListing } from "../redux/actions/listingActions";
 
 const FormComponent = ({ editListing, getCurrentHouse }) => {
     const navigate = useNavigate();
@@ -46,8 +46,23 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
             [addListing]
         );
     };
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setAddListing((prevState) => ({
+                    ...prevState,
+                    image: reader.result, // Convert to base64 and store it
+                }));
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+    
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log(addListing)
         dispatch(addNewListing(addListing));
         navigate("/")
     };
@@ -126,24 +141,13 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                                         placeholder='e.g Utrecht'
                                     />
                                 </FlexItem>
-
-                                <FlexItem>
-                                    <div className='image-upload'>
-                                        <label htmlFor='file-input'>
-                                            Upload Image (PNG OR JPG)*
-                                            <StyledBox>
-                                                <AiOutlinePlus className='box_img' />
-                                            </StyledBox>
-                                        </label>
-
-                                        <input
-                                            id='file-input'
-                                            type='file'
-                                            name='upload'
-                                            accept=' .png, .jpg, .jpeg'
-                                        />
-                                    </div>
-                                </FlexItem>
+                                <input
+            id="file-input"
+            type="file"
+            name="upload"
+            accept=".png, .jpg, .jpeg"
+            onChange={handleImageChange}
+        />
                                 <FlexItem>
                                     <label htmlFor='price'>Price*</label>
                                     <input
@@ -307,7 +311,26 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                                 />
                             </FlexItem>
 
-                            <FlexItem>
+                                <FlexItem>
+    <div className="image-upload">
+        <label htmlFor="file-input">
+            Upload Image (PNG OR JPG)*
+            <StyledBox>
+                <AiOutlinePlus className="box_img" />
+            </StyledBox>
+        </label>
+
+        <input
+            id="file-input"
+            type="file"
+            name="upload"
+            accept=".png, .jpg, .jpeg"
+            onChange={handleImageChange}
+        />
+    </div>
+</FlexItem> 
+
+                            {/* <FlexItem>
                                 <div className='image-upload'>
                                     <label htmlFor='file-input'>
                                         Upload Image (PNG OR JPG)*
@@ -323,7 +346,7 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
                                         accept=' .png, .jpg, .jpeg'
                                     />
                                 </div>
-                            </FlexItem>
+                            </FlexItem> */}
 
                             <FlexItem>
                                 <label htmlFor='price'>Price*</label>

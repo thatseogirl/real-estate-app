@@ -2,19 +2,21 @@ import React from "react";
 import {
     StyledContainer,
     StyledMainContainer,
-} from "../assets/styles/Container.styled";
-import EmptyState from "../components/pages/EmptyState";
-import { Flex } from "../assets/styles/Header.styled";
-import { SearchForm, FlexWrapper } from "../assets/styles/reusable.styled";
-import { Header, HouseOverView, HouseSorting } from "../components";
+} from "../styles/Container.styled";
+import EmptyState from "../pages/EmptyState";
+import { Flex } from "../styles/Header.styled";
+import { SearchForm, FlexWrapper } from "../styles/reusable.styled";
+import Header from "../components/Header";
+import HouseOverView from "../pages/HouseOverView";
+import HouseSorting from "../pages/HouseSorting";
 import { FiSearch } from "react-icons/fi";
-import useMediaQuery from "../components/hooks/useMediaQuery";
+import useMediaQuery from "../hooks/useMediaQuery";
 import { useEffect } from "react";
 import {
     fetchAllHouses,
     filteredListing,
     houses,
-    newListing,
+    newListing
 } from "../redux/actions/listingActions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -24,9 +26,6 @@ const Home = () => {
     const dispatch = useDispatch();
     const getHouses = useSelector(houses);
     const newHouseListing = useSelector(newListing);
-    const logLenght = getHouses.length
-
-    console.log(logLenght)
 
     useEffect(() => {
         dispatch(fetchAllHouses());
@@ -35,6 +34,8 @@ const Home = () => {
     const handleChange = (e) => {
         dispatch(filteredListing(e.target.value));
     };
+    const houseData = newHouseListing?.length > 0 ? newHouseListing : getHouses;
+
     return (
         <StyledMainContainer>
             <Header />
@@ -55,13 +56,13 @@ const Home = () => {
                                 value={result}
                             />
                         </SearchForm>
-                        <HouseSorting getHouses={getHouses} />
+                        <HouseSorting getHouses={houseData} />
                     </Flex>
-                    {getHouses.length === 0 ? <EmptyState /> :
-                        <p>{getHouses.length} results found</p>}
+                    {houseData.length === 0 ? <EmptyState /> :
+                        <p>{houseData.length} results found</p>}
                 </FlexWrapper>
             </StyledContainer>
-            <HouseOverView getHouses={getHouses} newHouseListing={newHouseListing} />
+            <HouseOverView  />
         </StyledMainContainer>
     );
 };

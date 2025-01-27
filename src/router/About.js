@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledContainer } from "../assets/styles/Container.styled";
-import { Logo } from "../assets/styles/StyledNav.styled";
-import { AboutContainer } from "../assets/styles/About.styled";
-import { StyledAside } from "../assets/styles/reusable.styled";
+import { StyledContainer } from "../styles/Container.styled";
+import { Logo } from "../styles/StyledNav.styled";
+import { AboutContainer } from "../styles/About.styled";
+import { StyledAside } from "../styles/reusable.styled";
 import estate from "../assets/images/estate.png";
 
 export default function About() {
