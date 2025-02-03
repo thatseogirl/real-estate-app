@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { BsHouseDoor } from "react-icons/bs";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import { Mobile } from "../assets/styles/reusable.styled";
+import { Mobile } from "../styles/reusable.styled";
 
 const MobileNav = () => {
     const location = useLocation();

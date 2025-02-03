@@ -1,12 +1,12 @@
 import estate from "../assets/images/estate.png";
 import { NavLink, useLocation } from "react-router-dom";
-import { StyledContainer } from "../assets/styles/Container.styled";
+import { StyledContainer } from "../styles/Container.styled";
 import {
     Logo,
     NavBar,
     StyledUL,
     StyledNavigation,
-} from "../assets/styles/StyledNav.styled";
+} from "../styles/StyledNav.styled";
 
 const Navigation = () => {
     const location = useLocation();

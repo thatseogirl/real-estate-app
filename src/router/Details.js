@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import EditDelete from "../components//pages/EditDelete";
-import { StyledContainer } from "../assets/styles/Container.styled";
+import EditDelete from "../pages/EditDelete";
+import { StyledContainer } from "../styles/Container.styled";
 import {
     StyledCard,
     CardImage,
@@ -10,8 +10,8 @@ import {
     CardDescription,
     StyledMargin,
     CardFlexItem,
-} from "../assets/styles/reusable.styled";
-import { Flex } from "../assets/styles/Header.styled";
+} from "../styles/reusable.styled";
+import { Flex } from "../styles/Header.styled";
 import { GoLocation } from "react-icons/go";
 import {
     MdCropSquare,
@@ -20,7 +20,7 @@ import {
     MdGarage,
 } from "react-icons/md";
 import { AiOutlineEuroCircle, AiOutlineHome } from "react-icons/ai";
-import useMediaQuery from "../components/hooks/useMediaQuery";
+import useMediaQuery from "../hooks/useMediaQuery";
 import { houses, fetchAllHouses } from "../redux/actions/listingActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";

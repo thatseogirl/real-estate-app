@@ -1,9 +1,9 @@
 import React from "react";
-import { Flex } from "../../assets/styles/Header.styled";
+import { Flex } from "../styles/Header.styled";
 import { useDispatch } from "react-redux";
 import Button from "../reusableComponents/Button";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { sortByPrice, sortBySize } from "../../redux/actions/listingActions";
+import { sortByPrice, sortBySize } from "../redux/actions/listingActions";
 import { useState } from "react";
 
 export default function HouseSorting({ getHouses }) {

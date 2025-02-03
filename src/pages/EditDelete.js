@@ -1,4 +1,4 @@
-import { Flex } from "../../assets/styles/Header.styled";
+import { Flex } from "../styles/Header.styled";
 import { Link } from "react-router-dom";
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import Modal from "../reusableComponents/Modal";
