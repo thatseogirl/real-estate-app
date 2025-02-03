@@ -17,7 +17,6 @@ import {
   MdOutlineBedroomParent,
   MdCropSquare,
 } from "react-icons/md";
-import { AiOutlineEuroCircle } from "react-icons/ai";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const HouseListing = () => {
