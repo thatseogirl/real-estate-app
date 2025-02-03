@@ -21,7 +21,6 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
   const breakPoint = useMediaQuery("(max-width: 768px)");
   const dispatch = useDispatch();
   const [image, setImage] = useState("");
-  const [error, setError] = useState("");
   const [addListing, setAddListing] = useState({
     streetName: "",
     houseNumber: "",
@@ -84,7 +83,7 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
       dispatch(addNewListing(addListing));
       navigate("/");
     } else {
-      setError("Required field missing");
+      setErrors("Required field missing");
     }
   };
   const handleEdit = (event) => {
