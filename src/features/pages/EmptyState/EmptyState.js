@@ -1,6 +1,6 @@
 import React from 'react'
-import { StyledContainer } from '../../../styles/Container.styled'
 import { EmptyHouse } from '../../../styles/reusable.styled'
+import { StyledContainer } from '../../../styles/Container.styled'
 
 const EmptyState = () => {
     return (

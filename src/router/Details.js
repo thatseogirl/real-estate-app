@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import EditDelete from "../features/EditDelete";
 import { StyledContainer } from "../styles/Container.styled";
 import {
     StyledCard,
@@ -25,6 +24,7 @@ import { houses, fetchAllHouses } from "../store/actions/listingActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import ListingActions from "../features/ListingActions/ListingActions";
 
 const Details = () => {
     const { id } = useParams();
@@ -51,7 +51,7 @@ const Details = () => {
                         <div>
                             <Flex>
                                 <CardText>{element.streetName}</CardText>
-                                <EditDelete />
+                                <ListingActions />
                             </Flex>
                             <CardFlexItem>
                                 <GoLocation className='image' />

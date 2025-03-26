@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 import Button from "../../ui/Button/Button";
 import { Logo } from "../../../styles/StyledNav.styled";
-import estate from "../assets/images/estate.png";
+import estate from "../../../assets/images/realestate.png";
 import { Flex, StyledHeader } from "../../../styles/Header.styled";
 import { StyledContainer } from "../../../styles/Container.styled";
 import useMediaQuery from "../../../hooks/useMediaQuery";

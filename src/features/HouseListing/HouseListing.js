@@ -10,7 +10,7 @@ import {
   StyledMargin,
   HouseWrapper,
 } from "../../styles/reusable.styled";
-import EditDelete from "../ListingActions/ListingActions";
+import ListingActions from "../ListingActions/ListingActions";
 import { Link } from "react-router-dom";
 import {
   MdBathroom,
@@ -77,7 +77,7 @@ const HouseListing = () => {
                   </Flex>
                 </div>
               </WrapperFlexItem>
-              <EditDelete id={data.id} />
+              <ListingActions id={data.id} />
             </Flex>
           </HouseWrapper>
         ))}

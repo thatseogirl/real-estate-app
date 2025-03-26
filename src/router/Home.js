@@ -3,12 +3,12 @@ import {
     StyledContainer,
     StyledMainContainer,
 } from "../styles/Container.styled";
-import EmptyState from "../features/pages/EmptyState";
+import EmptyState from "../features/pages/EmptyState/EmptyState";
 import { Flex } from "../styles/Header.styled";
 import { SearchForm, FlexWrapper } from "../styles/reusable.styled";
 import Header from "../components/navigation/Header/Header";
-import HouseOverView from "../features/pages/HouseOverview";
-import HouseSorting from "../features/HouseSorting";
+import HouseOverView from "../features/pages/HouseOverview/HouseOverView";
+import HouseSorting from "../features/HouseSorting/HouseSorting";
 import { FiSearch } from "react-icons/fi";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { useEffect } from "react";
