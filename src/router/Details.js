@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
-import EditDelete from "../pages/EditDelete";
+import EditDelete from "../features/EditDelete";
 import { StyledContainer } from "../styles/Container.styled";
 import {
     StyledCard,
@@ -21,7 +21,7 @@ import {
 } from "react-icons/md";
 import { AiOutlineEuroCircle, AiOutlineHome } from "react-icons/ai";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { houses, fetchAllHouses } from "../redux/actions/listingActions";
+import { houses, fetchAllHouses } from "../store/actions/listingActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";

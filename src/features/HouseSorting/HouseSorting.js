@@ -1,9 +1,9 @@
 import React from "react";
-import { Flex } from "../styles/Header.styled";
+import { Flex } from "../../styles/Header.styled";
 import { useDispatch } from "react-redux";
-import Button from "../reusableComponents/Button";
-import useMediaQuery from "../hooks/useMediaQuery";
-import { sortByPrice, sortBySize } from "../redux/actions/listingActions";
+import Button from "../../components/ui/Button/Button";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import { sortByPrice, sortBySize } from "../../store/actions/listingActions";
 import { useState } from "react";
 
 export default function HouseSorting({ getHouses }) {
@@ -22,7 +22,6 @@ export default function HouseSorting({ getHouses }) {
         setSortSize(true);
         setSortPrice(false);
     };
-
     return (
         <div>
             <Flex style={{ justifyContent: breakPoint ? "start" : "" }}>

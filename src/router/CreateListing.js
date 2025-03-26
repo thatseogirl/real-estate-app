@@ -1,5 +1,5 @@
 import React from 'react'
-import FormComponent from '../reusableComponents/FormComponent'
+import FormComponent from '../components/forms/FormComponent'
 
 export default function CreateListing() {
     return (

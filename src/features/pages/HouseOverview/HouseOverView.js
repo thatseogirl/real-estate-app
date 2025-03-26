@@ -1,5 +1,5 @@
-import { StyledContainer } from "../styles/Container.styled";
-import HouseListing from "./HouseListing";
+import { StyledContainer } from "../../../styles/Container.styled";
+import HouseListing from "../../HouseListing/HouseListing";
 
 const HouseOverView = () => {
     return (

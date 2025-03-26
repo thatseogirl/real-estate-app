@@ -1,7 +1,7 @@
 /* eslint-disable eqeqeq */
 import { React, useState } from "react";
-import FormComponent from "../reusableComponents/FormComponent";
-import { houses, fetchAllHouses } from "../redux/actions/listingActions";
+import FormComponent from "../components/forms/FormComponent";
+import { houses, fetchAllHouses } from "../store/actions/listingActions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";

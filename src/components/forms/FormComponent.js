@@ -2,19 +2,19 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import { BiArrowBack } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
-import { House } from "../styles/reusable.styled";
+import { House } from "../../styles/reusable.styled";
 import {
   FlexItem,
   StyledBox,
   ValidationError,
   FormWidth,
-} from "../styles/reusable.styled";
-import { StyledContainer, StyledFormWrapper } from "../styles/Container.styled";
-import Button from "./Button";
-import { addNewListing } from "../redux/actions/listingActions";
+} from "../../styles/reusable.styled";
+import { StyledContainer, StyledFormWrapper } from "../../styles/Container.styled";
+import Button from "../ui/Button/Button";
+import { addNewListing } from "../../store/actions/listingActions";
 
 const FormComponent = ({ editListing, getCurrentHouse }) => {
   const navigate = useNavigate();

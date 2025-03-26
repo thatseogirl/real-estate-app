@@ -1,6 +1,6 @@
-import { Flex } from "../styles/Header.styled";
+import { Flex } from "../../styles/Header.styled";
 import { useSelector } from "react-redux";
-import { houses, newListing } from "../redux/actions/listingActions";
+import { houses, newListing } from "../../store/actions/listingActions";
 import {
   House,
   StyledAside,
@@ -9,15 +9,15 @@ import {
   WrapperFlexItem,
   StyledMargin,
   HouseWrapper,
-} from "../styles/reusable.styled";
-import EditDelete from "./EditDelete";
+} from "../../styles/reusable.styled";
+import EditDelete from "../ListingActions/ListingActions";
 import { Link } from "react-router-dom";
 import {
   MdBathroom,
   MdOutlineBedroomParent,
   MdCropSquare,
 } from "react-icons/md";
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const HouseListing = () => {
   const getHouses = useSelector(houses);
