@@ -1,11 +1,11 @@
-import { Flex } from "../styles/Header.styled";
+import { Flex } from "../../styles/Header.styled";
 import { Link } from "react-router-dom";
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
-import Modal from "../reusableComponents/Modal";
+import Modal from "../../components/ui/Modal/Modal";
 
 import { useState } from "react";
 
-const EditDelete = ({ id }) => {
+const ListingActions = ({ id }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const handleClick = () => {
         setModalOpen(!modalOpen);
@@ -31,4 +31,4 @@ const EditDelete = ({ id }) => {
     );
 };
 
-export default EditDelete;
+export default ListingActions;

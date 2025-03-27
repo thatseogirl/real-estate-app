@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import StyledButton from "../styles/Button.styled";
+import StyledButton from "../../../styles/Button.styled";
 
 const Button = ({
     color,

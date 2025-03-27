@@ -16,6 +16,7 @@
 1. React (Hooks/Router).
 2. Redux.
 3. Styled Component.
+Todo
 
-
+store new users listing to local storage 
 ##### [Live Demo] (https://tobi-real-estate-app.netlify.app/)

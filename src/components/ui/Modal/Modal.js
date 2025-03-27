@@ -3,10 +3,10 @@ import {
   ModalOverLay,
   ModalContainer,
   FlexItem,
-} from "../styles/reusable.styled";
-import Button from "./Button";
+} from "../../../styles/reusable.styled";
+import Button from "../Button/Button";
 import { useDispatch } from "react-redux";
-import { removeListing } from "../redux/actions/listingActions";
+import { removeListing } from "../../../store/actions/listingActions";
 
 const Modal = ({ modalOpen, onClose, id }) => {
   const dispatch = useDispatch();

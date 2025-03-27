@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import MobileNav from '../components/MobileNav'
-import Navigation from "../components/Navigation"
+import MobileNav from '../components/navigation/MobileNav/MobileNav'
+import Navigation from "../components/navigation/Navigation/Navigation"
 import useMediaQuery from '../hooks/useMediaQuery'
 
 const MainLayout = () => {

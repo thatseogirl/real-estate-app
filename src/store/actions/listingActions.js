@@ -1,4 +1,4 @@
-import { axiosClient } from "../../axiosRequest/ApiClient";
+import { axiosClient } from "../../api/axiosInstance";
 import {
   FETCH_LISTING,
   ADD_LISTING,
