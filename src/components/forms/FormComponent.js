@@ -113,7 +113,6 @@ const FormComponent = ({ editListing, getCurrentHouse }) => {
   const handleEdit = (event) => {
     event.preventDefault();
     if (validateFields()) {
-      // You should dispatch an edit action here (not provided in your code)
       navigate("/");
     }
   };
